@@ -23,8 +23,16 @@ print(matriz[0][1])
 print('\n')
 
 # Digamos que seja necessário executar algum tipo de calculo sobre cada valor inseridos dentro dos elementos de uma matriz, como pode ser feito?
-for i in range(matriz.shape[0]): # utilizando o shape, consigo pegar a quantidade de linhas e também de colunas, peguei o número de linhas.
-    print(matriz[i])
-    for j in range(matriz.shape[1]):
-        print(matriz[i][j])
+#for i in range(matriz.shape[0]): # utilizando o shape, consigo pegar a quantidade de linhas e também de colunas, peguei o número de linhas.
+#    print(matriz[i])
+#    for j in range(matriz.shape[1]):
+#        print(matriz[i][j])
+
+
+
+
+
+
+
+
 

@@ -9,11 +9,12 @@ for valor in range(0, 5):
     lista.append(numero)
 
 result = 0
-for valorIn in lista[0:5]:
-    result += valorIn
+for valorIn in range(len(lista)):
+    result += lista[valorIn]
 print(result)
-
-
+# Fazendo a soma de uma maneira um pouco diferente
+import numpy as np
+print(np.array(lista).sum()) # Ao converter para array usando o numpy, terei mais métodos para chamar.
 
 
 
@@ -36,7 +37,7 @@ value = 0
 for _, grade in dicio.items():
     value += int(grade)
 
-print(value)
+print(value / 3)
 print('\n')
 
 
@@ -45,32 +46,15 @@ print('\n')
 
 # 3 - Matriz: Dada a matriz abaixo, construa uma estrutura de repetição para percorrer e somar todos os elementos da matriz
 
-import numpy as np
-
 matriz = np.array([[3, 4, 1],
                    [3, 1, 5]])
 
-#resultante = 0
-#for i in range(matriz.shape[0]):
-#    for j in range(matriz.shape[1]):
-#        resultante += int(matriz[i][j])
+totalValue = 0
+for valueLine in range(matriz.shape[0]):
+    for valueColumn in range(matriz.shape[1]):
+        totalValue += int(matriz[valueLine][valueColumn])
 
-#print(resultante)
-
-matriz = np.array([[3, 4, 1],
-                   [3, 1, 5]])
-
-for option in range(matriz.shape[0]):
-    for opElement in range(matriz.shape[1]):
-        result += int(matriz[option][opElement])
-
-
-
-
-
-
-
-
+print(totalValue)
 
 
 
