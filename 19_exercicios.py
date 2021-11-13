@@ -1,5 +1,6 @@
 
 import utilitarios2 as lt
+
 texto = lt.treatstring('Digite o seu nome ')
 print(texto)
 
