@@ -1,5 +1,5 @@
 
-# EXPRESSÕES REGULARES
+# EXPRESSÕES REGULARES (regular expression ou Regex)
 
 # O que são Expressões Regulares?
 
@@ -27,11 +27,12 @@
 
 # TRABALHANDO COM EXPRESSÕES REGULARES, TEMOS TAMBÉM OS METACARACTERES
     # . - Qualquer caractere (exceto linha noba)
-    # \w - Qualquer caractere alfanumérico
-    # \W - Qualquer caractere não-alfanumérico
+    # \w - Qualquer caractere alfanumérico (letras de A-Za-z0-9), não tem caracteres especiais
+    # \W - Qualquer caractere não-alfanumérico (qualquer caracteres que não seja letras maiusculas/minúsculas e números)
     # \d - Qualquer caractere que seja um digito (0-9)
-    # \D - Qualquer caractere não digito
+    # \D - Qualquer caractere não digito de 0-9
     # \s - Espaço em branco
+    # \S - Qualquer caracter diferente de espaço em branco
     # ˆ  - A palavra deve começar com uma determinada letra
     # $  - A palavra deve terminar com uma determinada letra
     # "\" - Usado antes de metacaracteres para especificar seu significado literal.
