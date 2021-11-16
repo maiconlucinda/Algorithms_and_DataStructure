@@ -18,5 +18,10 @@ print(soma1(10))
 
 
 # Usando o recurso %timeit é possível saber a quantidade de ações que uma determinada função precisa executar
-# para ser finalizada, caso seja realizada 9 ações por exemplo, podemos dizer que a função é O - 9.
+# para ser finalizada, caso seja realizada 9 ações por exemplo, podemos dizer que a função tem o BIG-O = 9.
+
+# Isso é muito usado em situações que estamos desenvolvendo algum algorítmo e desejamos fazer comparação para
+# ver a performance de nosso código.
+
+
 
