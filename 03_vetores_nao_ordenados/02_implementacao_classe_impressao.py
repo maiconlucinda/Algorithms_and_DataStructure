@@ -56,7 +56,7 @@ class VetorNaoOrdenado:
         for i in range(self.ultima_posicao + 1):
             if valorprocurado == self.valores[i]:
                 return i
-        # Caso o if em nehum momento seja true, no final será retornado -1
+        # Caso o if em nehum momento seja true, no final será retornado -1 para dizer que o elemento não existe
         return -1
 
 
