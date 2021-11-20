@@ -14,7 +14,7 @@ class OrderdedVector:
         self.valores = np.empty(self.capacidade, dtype=int)
 
 
-    def print(self):
+    def show(self):
         if self.ultima_posicao == -1:
             print('O vetor está vazio')
         else:
@@ -45,7 +45,8 @@ class OrderdedVector:
         #1
         # Por que -1? Porque no Python o indice comeca no zero, então de zero até 9 temos 10 posições.
         if self.ultima_posicao == self.capacidade - 1:
-            print('Capacidade máxima atingida')
+            print(f'Não foi possível adicionar o valor {valor}, capacidade máxima atingida')
+            return
 
         #2
         posicao = 0
@@ -80,6 +81,7 @@ class OrderdedVector:
         if posicao == -1:
             return -1
         else:
+            print(range(posicao, self.ultima_posicao))
             for i in range(posicao, self.ultima_posicao):
                 self.valores[i] = self.valores[i + 1]
             self.ultima_posicao -= 1
@@ -88,16 +90,19 @@ class OrderdedVector:
 
 vector = OrderdedVector(10)
 
-vector.insert(5)
-vector.insert(5)
-vector.insert(6)
+vector.insert(10)
+vector.insert(9)
+vector.insert(8)
 vector.insert(7)
+vector.insert(6)
+vector.insert(5)
+vector.insert(4)
+vector.insert(3)
 vector.insert(2)
-print(vector.search(8))
+vector.insert(1)
+#print(vector.search(8))
 vector.delete(5)
-
-
-vector.print()
+vector.show()
 
 
 
