@@ -25,8 +25,8 @@ class OrderdedVector:
     # 1 - Caso o valor do última posição seja igual a -1, posso retornar -1, para dizer que não existe ese valor dentro.
     # 2 - Loop para buscar até a última posição, algum valore que corresponda ao valor procurado
     # 3 - Caso o valor seja encontrado, retorne a posição do mesmo.
-    # Big-O = O(n)
-    def search(self, valor):
+    # O(n)
+    def linear_search(self, valor):
         for i in range(self.ultima_posicao + 1):
             if self.valores[i] > valor | i == self.ultima_posicao:
                 return -1
@@ -34,6 +34,32 @@ class OrderdedVector:
                 return i
         return -1
 
+
+    # 0(log n)
+    def binary_search(self, valor):
+        limite_inferior = 0
+        limite_superior = self.ultima_posicao
+
+        while True:
+            posicao_atual = int((limite_inferior + limite_superior) / 2)
+
+            # Se achou na primeira tentativa
+            if self.valores[posicao_atual] == valor:
+                return posicao_atual
+
+            # Se não encontrou o valor (encera o loop)
+            elif limite_inferior > limite_superior:
+                return -1
+
+            # Diminuindo o alcance
+            else:
+                # Alcance será a parte da esquerda (inferior)
+                if self.valores[posicao_atual] < valor:
+                    limite_inferior = posicao_atual + 1
+
+                # Alcance será a parte da direita (superior)
+                else:
+                    limite_superior = posicao_atual - 1
 
 
     #1 -  Validar se a estrutura já está cheia.
@@ -77,7 +103,7 @@ class OrderdedVector:
     #2 - Caso exista o valor, tendo em mente sua posição, posso mover os elementos que estão a frente uma casa a esquerda
     #3 - Decrementar o tamanho do vetor
     def delete(self, valor):
-        posicao = self.search(valor)
+        posicao = self.linear_search(valor)
         if posicao == -1:
             return -1
         else:
@@ -100,8 +126,8 @@ vector.insert(4)
 vector.insert(3)
 vector.insert(2)
 vector.insert(1)
-#print(vector.search(8))
-vector.delete(5)
+print(vector.binary_search(3))
+#vector.delete(5)
 vector.show()
 
 
