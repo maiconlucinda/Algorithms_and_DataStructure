@@ -40,7 +40,7 @@ class CircularQueue:
         # Variável para retornar qual elemento foi desenfileirado
         temp = self.values[self.beginning]
         self.beginning += 1
-        if self.beginning == self.capacity:
+        if self.beginning == self.capacity - 1:
             self.beginning = 0
         self.number_elements -= 1
         return temp
